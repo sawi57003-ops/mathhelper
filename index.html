@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MathHelper — Practice math, step by step</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <h1>🔢 MathHelper</h1>
+    <p class="tagline">Practice math, step by step. Pick a topic, read the key ideas, solve the problems, and see the worked steps.</p>
+    <p class="streak">Practice score: <strong id="score-line">0 correct / 0 tried</strong></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="topics">
+    <h2>Math topics</h2>
+    <p class="hint">Four topics with a short lesson and five practice problems each. Click a topic to read it and practice.</p>
+    <div class="topic-grid" id="topic-grid"></div>
+  </section>
+
+  <section id="lesson" hidden>
+    <h2 id="lesson-title"></h2>
+    <div id="lesson-body"></div>
+    <h3>Practice problems</h3>
+    <ol id="practice-list"></ol>
+    <p class="hint">Type your answer as a plain number (no units, no commas). The site checks it and shows the worked steps.</p>
+    <form id="answer-form">
+      <label>Problem number
+        <input id="answer-problem" type="number" min="1" max="5" value="1" required>
+      </label>
+      <label>Your answer (a number)
+        <input id="answer-value" type="number" step="any" required>
+      </label>
+      <button class="btn primary" type="submit">Check my answer</button>
+    </form>
+    <div id="answer-result"></div>
+    <button id="close-lesson-btn" class="btn">Close topic</button>
+  </section>
+
+  <section id="scores">
+    <h2>Practice history</h2>
+    <div id="score-history"><p>No problems tried yet.</p></div>
+  </section>
+</main>
+
+<section id="assistant" class="assistant wrap" aria-labelledby="assistant-heading">
+  <h2 id="assistant-heading">Ask MathHelper</h2>
+  <p>Chat with the MathHelper assistant: it explains math step by step, gives you practice problems and checks your answers.</p>
+  <p class="assistant-note">Your messages and this page's data go to the LLM provider you choose in the settings below. You confirm anything that cannot be undone before it happens.</p>
+  <p id="assistant-status" role="status">Connecting the assistant… If this message stays, the assistant could not load. You can still use the page directly.</p>
+  <div id="agent-app">
+    <div data-ns-slot="header"></div>
+    <div class="assistant-panels">
+      <div data-ns-slot="chat"></div>
+      <div data-ns-slot="agents"></div>
+    </div>
+    <div data-ns-slot="settings"></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>MathHelper is a static math practice site. Your practice history lives only in this browser (localStorage). No account, no server, no data leaves your device — except what you choose to send to your own LLM provider when the assistant is enabled.</p>
+    <p>What MathHelper cannot do: solve problems outside the four topics listed above, or grade official schoolwork. For those, ask your teacher.</p>
+  </div>
+</footer>
+
+<script type="module" src="script.js"></script>
+<script type="module" src="site.js"></script>
+</body>
+</html>

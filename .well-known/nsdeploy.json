@@ -1,0 +1,18 @@
+{
+  "exports": [
+    {
+      "aliases": [
+        "mathhelper",
+        "math_helper"
+      ],
+      "front_man": "math_helper",
+      "network": "mathhelper",
+      "url": "mathhelper"
+    }
+  ],
+  "imports": [],
+  "link_updates": {
+    "mode": "browser-local"
+  },
+  "protocol": "nsdeploy-link/v1"
+}
